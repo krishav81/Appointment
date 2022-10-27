@@ -9,6 +9,6 @@ import com.appointment.booking.model.Appointment;
 
 public interface AppointmentRepository extends JpaRepository<Appointment, Integer> {
 
-	List<Appointment> findAllByAppointmentDateBetween(LocalDate startDate, LocalDate endDate);
+	List<Appointment> findAllByAppointmentDateBetween(String string, String string2);
 
 }

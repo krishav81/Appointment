@@ -11,26 +11,27 @@ import javax.validation.ConstraintValidatorContext;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.appointment.booking.exception.ValidDateException;
 
-public class DateValidator implements ConstraintValidator<ValidDate, LocalDate>
+
+public class DateValidator implements ConstraintValidator<ValidDate, String>
 {
-	static DateTimeFormatter dateFormatter =
-		      DateTimeFormatter.ofPattern("MM-dd-yyyy")
-		          .withResolverStyle(ResolverStyle.STRICT);
+    
 	@Override
 	public void initialize(ValidDate  constraintAnnotation)
 	{
 		ConstraintValidator.super.initialize(constraintAnnotation);
 	}
 	@Override
-	public boolean isValid(LocalDate value, ConstraintValidatorContext context) {
+	public boolean isValid(String value, ConstraintValidatorContext context) {
 		try {
-			value.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+			LocalDate date = LocalDate.parse(value, formatter);
 			return true;
 		}
 		catch(Exception e)
 		{
-			return false;
+			throw new ValidDateException("Date Not Valid");
 		}
 	}
 	
