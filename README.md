@@ -66,3 +66,9 @@ http://localhost:8081/swagger-ui/index.html#
    "message": "To Date cannot be before From Date for the Date Range Requested",
    "details": "uri=/api/v1/appointments/getRange"
 }
+
+{
+   "timestamp": "2022-10-27T04:40:26.397+00:00",
+   "message": "Date Not Valid",
+   "details": "uri=/api/v1/appointments/create"
+}
