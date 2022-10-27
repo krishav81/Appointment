@@ -72,3 +72,15 @@ http://localhost:8081/swagger-ui/index.html#
    "message": "Date Not Valid",
    "details": "uri=/api/v1/appointments/create"
 }
+
+{
+   "timestamp": "2022-10-27T05:04:12.111+00:00",
+   "message": "Time Cannot be Null",
+   "details": "uri=/api/v1/appointments/create"
+}
+
+{
+   "timestamp": "2022-10-27T05:10:12.976+00:00",
+   "message": "Time Format Not Valid",
+   "details": "uri=/api/v1/appointments/create"
+}
