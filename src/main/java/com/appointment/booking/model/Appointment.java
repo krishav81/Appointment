@@ -30,7 +30,7 @@ public class Appointment {
 	@ValidTime
     private String appointmentTime;
 	@ValidTime
-    private LocalTime duration;
+    private String duration;
     @NotNull(message = "Description Cannot be null")
 	@Size(min=2,message = "Description too Short")
     @Size(max=50,message = "Description too Long")
@@ -44,7 +44,7 @@ public class Appointment {
 	public String getAppointmentTime() {
 		return appointmentTime;
 	}
-	public LocalTime getDuration() {
+	public String getDuration() {
 		return duration;
 	}
 	public String getDescription() {
@@ -59,7 +59,7 @@ public class Appointment {
 	public void setAppointmentTime(String appointmentTime) {
 		this.appointmentTime = appointmentTime;
 	}
-	public void setDuration(LocalTime duration) {
+	public void setDuration(String duration) {
 		this.duration = duration;
 	}
 	public void setDescription(String description) {
