@@ -59,3 +59,10 @@ localhost default port number : 8081
 
 http://localhost:8081/swagger-ui/index.html#
 
+** Exception Handling Response: **
+
+{
+   "timestamp": "2022-10-27T04:33:02.679+00:00",
+   "message": "To Date cannot be before From Date for the Date Range Requested",
+   "details": "uri=/api/v1/appointments/getRange"
+}
