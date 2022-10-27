@@ -1,9 +1,11 @@
 # Appointment
-API for Appointment Booking
+<h3><b>API for Appointment Booking</b></h3>
 
-**Run as a Spring Boot application
+Steps to Run:
+* Do a Clean Install
+* Run as a Spring Boot application
 
-REST Endpoints
+<h3>REST Endpoints</h3>
 
 1.GET request to return specific appointments - /api/v1/appointments/{appointmentId}
 
@@ -20,6 +22,8 @@ http://localhost:PORT/api/v1/appointments/
       "endDate":"2022-10-28"
 }
 
+Note: All Time Formats should be in yyyy-MM-dd Format only to get Valid Response
+
 4.POST request to add new appointments - /api/v1/appointments/create
 
 http://localhost:PORT/api/v1/appointments/create
@@ -28,10 +32,13 @@ Pass Body as JSON:
 
 {
 	"appointmentDate":"2022-10-29",
-	"appointmentTime":"11:00:00",
+	"appointmentTime":"11:00",
 	"duration":"02:00",
-	"description":"Des"
+	"description":"Appointment Booking"
 }
+
+Note: All Time Formats should be in HH:mm Format only to get Valid Response. It can be in 24 Hour Format.
+Note: All Time Formats should be in yyyy-MM-dd Format only to get Valid Response
 
 5.PUT request to update appointments - /api/v1/appointments/
 
@@ -42,10 +49,11 @@ Pass Body as JSON:
 {
 	"Id":"1"
 	"appointmentDate":"2022-10-29",
-	"appointmentTime":"11:00:00",
+	"appointmentTime":"11:00",
 	"duration":"02:00",
-	"description":"Des"
+	"description":"Appointment Booked"
 }
+Note: All Time Formats should be in yyyy-MM-dd Format only to get Valid Response
 
 6.DELETE request to delete specific appointments - /api/v1/appointments/{appointmentId}
 
@@ -84,3 +92,4 @@ http://localhost:8081/swagger-ui/index.html#
    "message": "Time Format Not Valid",
    "details": "uri=/api/v1/appointments/create"
 }
+
