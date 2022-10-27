@@ -37,6 +37,8 @@ Pass Body as JSON:
 	"description":"Appointment Booking"
 }
 
+Note: All Time Formats should be in HH:mm Format only to get Valid Response. It can be in 24 Hour Format.
+Note: All Time Formats should be in yyyy-MM-dd Format only to get Valid Response
 
 5.PUT request to update appointments - /api/v1/appointments/
 
@@ -91,5 +93,3 @@ http://localhost:8081/swagger-ui/index.html#
    "details": "uri=/api/v1/appointments/create"
 }
 
-Note: All Time Formats should be in HH:mm Format only to get Valid Response
-Note: All Time Formats should be in yyyy-MM-dd Format only to get Valid Response
